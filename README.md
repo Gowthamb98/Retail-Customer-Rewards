@@ -104,10 +104,11 @@ This application is used to generate Reward points for each recorded Purchase an
   }
 }
 ```
-- **To Fetch Order history** --location 'http://localhost:8080/api/purchaseDetails/retrieveCustomerPurchases' \
+- **To get Customer Purchase history** --location 'http://localhost:8080/api/purchaseDetails/retrieveCustomerPurchases' \
+  - **Method**: GET
   --header 'customerId: 2' \
-  --header 'lastThreeMonths: true'
-   - If lastThreeMonths tag is given as true then the last three months data is populated.
+  --header 'pastThreeMonths: true'
+   - If pastThreeMonths tag is given as true then the last three months data is populated.
    - If none of the options are chosen by default it populates all orders for the customer
    - *Response*
 ```json
@@ -156,4 +157,4 @@ This application is used to generate Reward points for each recorded Purchase an
 ```
 
 # Unit Test Results
-![Unit Test Results](https://github.com/Gowthamb98/Retail-Rewards/blob/main/src/main/resources/testresults/TestResult.png)
+![Unit Test Results](https://github.com/Gowthamb98/Retail-Customer-Rewards/blob/main/src/main/resources/testresults/TestResult.png)
