@@ -104,13 +104,12 @@ This application is used to generate Reward points for each recorded Purchase an
   }
 }
 ```
-- **To get Customer Purchase history** --location 'http://localhost:8080/api/purchaseDetails/retrieveCustomerPurchases' \
+- **To get Customer Purchase history** --location 'http://localhost:8080/api/purchaseDetails/retrieveCustomerPurchases/{customerId}' \
   - **Method**: GET
-  --header 'customerId: 2' \
-  --header 'pastThreeMonths: true'
-   - If pastThreeMonths tag is given as true then the last three months data is populated.
-   - If none of the options are chosen by default it populates all orders for the customer
-   - *Response*
+    - To populate past three months data : pass parameter in the params section \ 
+      Key: pastThreeMonths, Value: true
+    - If pastThreeMonths param is not passed, then (by default it is set as false) it populates all Purchase Details for the customer
+    - *Response*
 ```json
 {
   "details": {
